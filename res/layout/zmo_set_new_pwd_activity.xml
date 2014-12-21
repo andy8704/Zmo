@@ -3,40 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/color_tool_bg"
+    android:orientation="vertical"
     android:paddingLeft="15dip"
     android:paddingRight="15dip" >
 
-    <TextView android:layout_width="match_parent"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14dip"
         android:layout_marginTop="80dip"
         android:text="@string/pwd_set_new_pwd_tip_str"
-        android:textColor="@android:color/black"/>
+        android:textColor="@android:color/black"
+        android:textSize="14dip" />
 
     <com.zmo.view.ZmoEditText
         android:id="@+id/pwd1_edit_id"
         android:layout_width="match_parent"
         android:layout_height="45dip"
-        android:layout_marginTop="40dip" />
+        android:layout_marginTop="40dip"
+        android:background="@drawable/post_bg" />
 
     <com.zmo.view.ZmoEditText
         android:id="@+id/pwd2_edit_id"
         android:layout_width="match_parent"
         android:layout_height="45dip"
         android:layout_marginBottom="40dip"
-        android:layout_marginTop="40dip" />
-
+        android:layout_marginTop="40dip"
+        android:background="@drawable/post_bg" />
 
     <com.ad.view.progressbutton.CircularProgressButton
+        android:id="@+id/ok_btn_id"
         android:layout_width="match_parent"
         android:layout_height="45dip"
-        android:gravity="center"
         android:background="@color/color_535353"
+        android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="14dip"
-        android:id="@+id/ok_btn_id"
         app:cpb_textComplete="@string/register_btn_success_str"
         app:cpb_textError="@string/register_btn_error_str"
         app:cpb_textIdle="@string/register_btn_default_str" />

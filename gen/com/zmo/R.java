@@ -1243,18 +1243,19 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int scrawl_red_icon=0x7f020030;
         public static final int scrawl_select_icon=0x7f020031;
         public static final int scrawl_yellow_icon=0x7f020032;
-        public static final int seek_progress=0x7f020033;
-        public static final int seek_thumb=0x7f020034;
-        public static final int set_btn_bk=0x7f020035;
-        public static final int set_btn_bk_light=0x7f020036;
-        public static final int shadow_bottom=0x7f020037;
-        public static final int shadow_left=0x7f020038;
-        public static final int shadow_right=0x7f020039;
-        public static final int switchbutton_frame=0x7f02003a;
-        public static final int test_pic_subject=0x7f02003b;
-        public static final int vote_org_arrow=0x7f02003c;
-        public static final int xlistview_arrow=0x7f02003d;
-        public static final int xsearch_loading=0x7f02003e;
+        public static final int search_delete=0x7f020033;
+        public static final int seek_progress=0x7f020034;
+        public static final int seek_thumb=0x7f020035;
+        public static final int set_btn_bk=0x7f020036;
+        public static final int set_btn_bk_light=0x7f020037;
+        public static final int shadow_bottom=0x7f020038;
+        public static final int shadow_left=0x7f020039;
+        public static final int shadow_right=0x7f02003a;
+        public static final int switchbutton_frame=0x7f02003b;
+        public static final int test_pic_subject=0x7f02003c;
+        public static final int vote_org_arrow=0x7f02003d;
+        public static final int xlistview_arrow=0x7f02003e;
+        public static final int xsearch_loading=0x7f02003f;
     }
     public static final class id {
         public static final int CropImageView=0x7f06004e;

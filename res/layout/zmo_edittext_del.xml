@@ -4,20 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_vertical"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
     android:orientation="horizontal" >
 
     <EditText
         android:id="@+id/editview_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:gravity="left|center_vertical"
         android:padding="5dip"
+        android:textColor="@color/color_font1"
         android:background="@android:color/transparent"
         android:singleLine="true" />
 
     <ImageView
         android:id="@+id/del_btn_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="20dip"
+        android:visibility="invisible"
+        
+        android:src="@drawable/search_delete"
+        android:layout_height="20dip" />
 
 </LinearLayout>
