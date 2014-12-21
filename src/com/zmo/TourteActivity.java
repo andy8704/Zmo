@@ -141,4 +141,10 @@ public class TourteActivity extends ZmoBasicActivity implements IXListViewListen
 			};
 		}.start();
 	}
+
+	@Override
+	public void onRightClick() {
+		// TODO Auto-generated method stub
+		
+	}
 }

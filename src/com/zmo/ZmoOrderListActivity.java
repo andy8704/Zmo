@@ -121,4 +121,10 @@ public class ZmoOrderListActivity extends ZmoBasicActivity implements OnClickLis
 		}
 
 	}
+
+	@Override
+	public void onRightClick() {
+		// TODO Auto-generated method stub
+		
+	}
 }

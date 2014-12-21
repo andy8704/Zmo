@@ -31,6 +31,15 @@
             android:text="IT男创业"
             android:textColor="@color/color_tool_text"
             android:textSize="16dip" />
+        
+        <TextView android:layout_width="50dip"
+            android:layout_height="match_parent"
+            android:textSize="14dip"
+            android:id="@+id/right_btn_id"
+            android:visibility="invisible"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_font1"/>
     </RelativeLayout>
 
     <FrameLayout

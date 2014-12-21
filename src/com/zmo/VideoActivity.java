@@ -138,4 +138,10 @@ public class VideoActivity extends ZmoBasicActivity implements IXListViewListene
 			};
 		}.start();
 	}
+
+	@Override
+	public void onRightClick() {
+		// TODO Auto-generated method stub
+		
+	}
 }

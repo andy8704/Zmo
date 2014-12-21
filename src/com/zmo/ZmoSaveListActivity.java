@@ -123,4 +123,10 @@ public class ZmoSaveListActivity extends ZmoBasicActivity implements OnClickList
 		}
 
 	}
+
+	@Override
+	public void onRightClick() {
+		// TODO Auto-generated method stub
+		
+	}
 }

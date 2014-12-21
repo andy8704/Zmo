@@ -11,10 +11,11 @@ import android.widget.TextView;
 import com.zmo.data.AccountData;
 import com.zmo.utils.CommonUtil;
 
-public class ZmoBasicActivity extends FragmentActivity {
+public abstract class ZmoBasicActivity extends FragmentActivity {
 
 	private ImageView iv_backBtnView;
 	private TextView tv_TitleView;
+	private TextView tv_RightBtnView;
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -31,12 +32,20 @@ public class ZmoBasicActivity extends FragmentActivity {
 	private void initView() {
 		iv_backBtnView = (ImageView) findViewById(R.id.back_btn_id);
 		tv_TitleView = (TextView) findViewById(R.id.title_view_id);
+		tv_RightBtnView = (TextView) findViewById(R.id.right_btn_id);
 
 		iv_backBtnView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
 				// TODO Auto-generated method stub
 				finish();
+			}
+		});
+
+		tv_RightBtnView.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				onRightClick();
 			}
 		});
 	}
@@ -56,6 +65,21 @@ public class ZmoBasicActivity extends FragmentActivity {
 		tv_TitleView.setText(resouceId);
 	}
 
+	public void onRightVisible(boolean bShow) {
+		if (bShow)
+			tv_RightBtnView.setVisibility(View.VISIBLE);
+		else
+			tv_RightBtnView.setVisibility(View.INVISIBLE);
+	}
+	
+	public void onSetRightLable(final String lable){
+		tv_RightBtnView.setText(lable);
+	}
+	
+	public void onSetRightLable(final int nResourceId){
+		tv_RightBtnView.setText(nResourceId);
+	}
+
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
@@ -70,4 +94,6 @@ public class ZmoBasicActivity extends FragmentActivity {
 
 		return false;
 	}
+
+	public abstract void onRightClick();
 }

@@ -14,7 +14,6 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -238,5 +237,11 @@ public class ZmoSetActivity extends ZmoBasicActivity implements OnClickListener 
 			}
 		}
 		super.onActivityResult(requestCode, resultCode, data);
+	}
+
+	@Override
+	public void onRightClick() {
+		// TODO Auto-generated method stub
+		
 	}
 }

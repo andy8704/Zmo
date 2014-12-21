@@ -25,15 +25,16 @@
                 android:paddingLeft="15dip"
                 android:paddingTop="15dip" >
 
-                <ImageView
+                <com.ad.view.shapeimageview.CircularImageView
                     android:id="@+id/user_img_id"
                     android:layout_width="50dip"
                     android:layout_height="50dip"
                     android:scaleType="fitXY"
-                    android:src="@drawable/ic_launcher" />
+                    android:src="@drawable/default_user_icon" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
+                    android:layout_marginLeft="5dip"
                     android:layout_height="wrap_content" >
 
                     <TextView

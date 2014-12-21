@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:textSize="14dip"
         android:id="@+id/pwd_view_id"
-        android:textColor="@android:color/black"
+        android:textColor="@color/color_font1"
         android:text="您的手机号码：135****2222"
         android:layout_marginTop="30dip"/>
 

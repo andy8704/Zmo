@@ -1,11 +1,16 @@
 package com.zmo;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.InputType;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
+import com.ad.util.ToastUtil;
 import com.ad.view.progressbutton.CircularProgressButton;
 import com.zmo.view.ZmoEditText;
 
@@ -23,6 +28,23 @@ public class ZmoLogInActivity extends ZmoBasicActivity implements OnClickListene
 	private TextView mWeiBoBtn;
 	private TextView mQQBtn;
 	private TextView mWeiXinBtn;
+	
+	private Handler mHandler = new Handler() {
+		public void handleMessage(android.os.Message msg) {
+			switch (msg.what) {
+			case 0:
+				mLoginBtn.setProgress(CircularProgressButton.ERROR_STATE_PROGRESS);
+				break;
+			case 1:
+				mLoginBtn.setProgress(CircularProgressButton.SUCCESS_STATE_PROGRESS);
+				finish();
+				break;
+			default:
+				break;
+			}
+		};
+	};
+
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -30,6 +52,9 @@ public class ZmoLogInActivity extends ZmoBasicActivity implements OnClickListene
 		super.onCreate(arg0);
 
 		setContentView(R.layout.zmo_login_activity);
+		setTitle("登录");
+		onSetRightLable("注册");
+		onRightVisible(true);
 		initView();
 		addListener();
 	}
@@ -74,10 +99,11 @@ public class ZmoLogInActivity extends ZmoBasicActivity implements OnClickListene
 		switch (view.getId()) {
 		case R.id.login_btn_id:
 			break;
-
 		case R.id.email_tab_id:
+			onSetState(true);
 			break;
 		case R.id.mobile_tab_id:
+			onSetState(false);
 			break;
 		case R.id.weibo_login_btn_id:
 			break;
@@ -95,9 +121,53 @@ public class ZmoLogInActivity extends ZmoBasicActivity implements OnClickListene
 		if(bEmailFlag){
 			// email模式登录
 			mNameEditView.onSetTextType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
+			
+			mEmailTabBtn.setBackgroundColor(getResources().getColor(R.color.color_535353));
+			mEmailTabBtn.setTextColor(Color.WHITE);
+			mMobileTabBtn.setBackgroundColor(Color.WHITE);
+			mMobileTabBtn.setTextColor(Color.BLACK);
 		}else{
 			// mobile模式登录
 			mNameEditView.onSetTextType(InputType.TYPE_CLASS_NUMBER);
+			
+			mMobileTabBtn.setBackgroundColor(getResources().getColor(R.color.color_535353));
+			mMobileTabBtn.setTextColor(Color.WHITE);
+			mEmailTabBtn.setBackgroundColor(Color.WHITE);
+			mEmailTabBtn.setTextColor(Color.BLACK);
 		}
+	}
+	
+	private void onLogIn(){
+		
+		String mobileString = mNameEditView.onGetEditText();
+		String pwdString = mPwdEditView.onGetEditText();
+
+		if (TextUtils.isEmpty(mobileString)) {
+			ToastUtil.onShowToast(this, "请输入手机号！");
+			return;
+		}
+
+		if (TextUtils.isEmpty(pwdString)) {
+			ToastUtil.onShowToast(this, "请输入密码！");
+			return;
+		}
+
+		mLoginBtn.setProgress(CircularProgressButton.INDETERMINATE_STATE_PROGRESS);
+
+		new Thread() {
+			public void run() {
+				synchronized (ZmoLogInActivity.class) {
+
+					mHandler.sendEmptyMessage(1);
+				}
+			};
+		}.start();
+	}
+
+	@Override
+	public void onRightClick() {
+
+		startActivity(new Intent(this, ZmoRegisterActivity.class));
+		finish();
 	}
 }

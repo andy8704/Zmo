@@ -131,4 +131,10 @@ public class ZmoPwdManagerActivity extends ZmoBasicActivity implements OnClickLi
 		}
 		super.onActivityResult(requestCode, resultCode, arg2);
 	}
+
+	@Override
+	public void onRightClick() {
+		// TODO Auto-generated method stub
+		
+	}
 }

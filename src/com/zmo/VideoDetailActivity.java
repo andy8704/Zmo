@@ -109,4 +109,10 @@ public class VideoDetailActivity extends ZmoBasicActivity {
 			};
 		}.start();
 	}
+
+	@Override
+	public void onRightClick() {
+		// TODO Auto-generated method stub
+		
+	}
 }

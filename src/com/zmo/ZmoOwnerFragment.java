@@ -7,11 +7,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.ad.view.shapeimageview.CircularImageView;
 import com.zmo.view.ZmoOrderView;
 
 public class ZmoOwnerFragment extends BaseFragment implements OnClickListener {
 
-	private ImageView iv_UserImageView;
+	private CircularImageView iv_UserImageView;
 	private TextView tv_UserNameView;
 	private TextView tv_UserOccupationView;
 	private TextView tv_UserLevelView;
@@ -38,7 +39,7 @@ public class ZmoOwnerFragment extends BaseFragment implements OnClickListener {
 	@Override
 	protected void initView() {
 
-		iv_UserImageView = (ImageView) findViewById(R.id.user_img_id);
+		iv_UserImageView = (CircularImageView) findViewById(R.id.user_img_id);
 		tv_UserNameView = (TextView) findViewById(R.id.user_name_id);
 		tv_UserOccupationView = (TextView) findViewById(R.id.user_occupation_id);
 		tv_UserLevelView = (TextView) findViewById(R.id.user_level_id);
