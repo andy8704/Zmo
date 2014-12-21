@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dip"
+    android:paddingRight="10dip"
+    android:paddingTop="10dip"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/photo_btn_id"
+        android:layout_width="match_parent"
+        android:layout_height="34dip"
+        android:gravity="center"
+        android:background="@drawable/coner_top_item_shape"
+        android:text="@string/pic_photograph_str"
+        android:textColor="@android:color/black"
+        android:textSize="14dip" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/color_divider" >
+    </View>
+
+    <TextView
+        android:id="@+id/camera_btn_id"
+        android:layout_width="match_parent"
+        android:layout_height="34dip"
+        android:gravity="center"
+        android:background="@drawable/coner_bottom_item_shape"
+        android:text="@string/pic_camera_str"
+        android:textColor="@android:color/black"
+        android:textSize="14dip" />
+
+    <TextView
+        android:id="@+id/cancel_btn_id"
+        android:layout_width="match_parent"
+        android:layout_height="34dip"
+        android:layout_marginBottom="10dip"
+        android:layout_marginTop="10dip"
+        android:background="@drawable/coner_item_shape"
+        android:gravity="center"
+        android:text="@string/cancel_str"
+        android:textColor="@android:color/black"
+        android:textSize="14dip" />
+
+</LinearLayout>

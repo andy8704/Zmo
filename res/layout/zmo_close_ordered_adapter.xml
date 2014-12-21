@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="15dip"
+    android:paddingLeft="10dip"
+    android:paddingRight="20dip"
+    android:paddingTop="15dip" >
+
+    <ImageView
+        android:id="@+id/order_img_id"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/order_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单号：11071210"
+            android:textSize="12dip" />
+
+        <TextView
+            android:id="@+id/order_title_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="3个IT男创业，使用100天卖出了30万个肉夹馍"
+            android:textSize="12dip" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom" >
+
+            <TextView
+                android:id="@+id/time_view_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2014-12-18"
+                android:textSize="10dip" />
+
+            <TextView
+                android:id="@+id/order_state_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="15dip"
+                android:text="交易关闭"
+                android:textSize="12dip" />
+
+            <TextView
+                android:id="@+id/del_order_btn_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/order_state_id"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="10dip"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="10dip"
+                android:text="删除订单"
+                android:layout_alignParentRight="true"
+                android:textSize="10dip" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

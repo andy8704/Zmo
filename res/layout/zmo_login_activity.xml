@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
+        <TextView
+            android:id="@+id/mobile_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            android:gravity="center"
+            android:text="@string/mobile_tab_lable"
+            android:textColor="@android:color/white" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/email_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            android:gravity="center"
+            android:text="@string/email_tab_lable"
+            android:textColor="@android:color/white" >
+        </TextView>
+
+        
+    </LinearLayout>
+
+    <com.zmo.view.ZmoEditText
+        android:id="@+id/login_edit_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginTop="40dip" />
+
+    <ccom.zmo.view.ZmoEditText
+        android:id="@+id/pwd_edit_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginBottom="40dip"
+        android:layout_marginTop="20dip" />
+
+    <com.ad.view.progressbutton.CircularProgressButton
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="14dip"
+        android:id="@+id/login_btn_id"
+        app:cpb_textComplete="@string/login_btn_success_str"
+        app:cpb_textError="@string/login_btn_error_str"
+        app:cpb_textIdle="@string/login_btn_default_str" />
+
+    <TextView
+        android:id="@+id/forget_view_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dip"
+        android:padding="5dip"
+        android:text="@string/forget_pwd_lable"
+        android:textSize="12dip" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dip"
+        android:gravity="center"
+        android:text="@string/login_platform_lable"
+        android:textSize="14dip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:gravity="center"
+             android:id="@+id/weibo_login_btn_id"
+            android:text="@string/weibo_login_lable"
+            android:textSize="12dip" />
+
+        <TextView
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_marginLeft="20dip"
+            android:layout_marginRight="20dip"
+            android:gravity="center"
+            android:id="@+id/qq_login_btn_id"
+            android:text="@string/qq_login_lable"
+            android:textSize="12dip" />
+
+        <TextView
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:gravity="center"
+            android:id="@+id/weixin_login_btn_id"
+            android:text="@string/weixin_login_lable"
+            android:textSize="12dip" />
+    </LinearLayout>
+
+</LinearLayout>

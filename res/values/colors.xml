@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="color_tool_text">#000000</color>
+    <color name="color_tool_bg">#c4c4c4</color>
+    <color name="color_tool_text_select">#5CACEE</color>
+    <color name="color_bg">#ffffff</color>
+    <color name="color_title_bg">#F0F0F0</color>
+    <color name="color_555555">#555555</color>
+    <color name="color_divider">#000000</color>
+    <color name="color_b5b5b5">#B5B5B5</color>
+    <color name="color_535353">#535353</color>
+    <color name="color_dedede_bg">#dedede</color>
+    <color name="color_font0">#dedede</color>
+    <color name="color_font1">#000000</color>
+
+</resources>

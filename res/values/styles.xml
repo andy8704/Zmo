@@ -1,0 +1,38 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <style name="tool_style">
+        <item name="android:textSize">16dip</item>
+        <item name="android:textColor">@color/color_tool_text</item>
+    </style>
+    
+    <style name="image_style">
+        <item name="android:layout_width">130dip</item>
+        <item name="android:layout_height">80dip</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    
+     <style name="MediaButton.Play">
+        <item name="android:src">@drawable/ic_media_play</item>
+    </style>
+        <style name="MediaButton">
+        <item name="android:background">@null</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="Widget.SeekBar" parent="@android:style/Widget.SeekBar">
+        <item name="android:maxHeight">6.0dip</item>
+        <item name="android:indeterminateDrawable">@drawable/progress_indeterminate_horizontal</item>
+        <item name="android:progressDrawable">@drawable/progress_seekbar</item>
+        <item name="android:minHeight">6.0dip</item>
+        <item name="android:thumb">@drawable/seek_thumb</item>
+    </style>
+    
+     <!-- 实现的一个对话框的背景色是透明色 -->
+    <style name="transparent" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    
+</resources>

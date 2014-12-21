@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="15dip"
+    android:paddingLeft="15dip"
+    android:paddingTop="15dip" >
+
+    <ImageView
+        android:id="@+id/img_view_id"
+        style="@style/image_style"
+        android:src="@drawable/test_pic_subject" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dip"
+        android:layout_marginRight="5dip"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:singleLine="true"
+            android:text="3个IT男创业，100天卖出20万个肉夹馍"
+            android:textColor="@color/color_tool_text"
+            android:textSize="16dip" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+            
+            <TextView android:id="@+id/price_view_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dip"
+                android:text="价格： 免费"
+                android:textColor="@color/color_555555"></TextView>
+            
+            <TextView android:id="@+id/count_view_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dip"
+                android:layout_marginLeft="20dip"
+                android:text="剩余名额： 25"
+                android:textColor="@color/color_555555"></TextView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/signup_btn_id"
+            android:layout_width="100dip"
+            android:layout_height="35dip"
+            android:layout_marginTop="8dip"
+            android:singleLine="true"
+            android:text="报名"
+            android:background="@color/color_title_bg"
+            android:textColor="@color/color_tool_text"
+            android:textSize="14dip" />
+    </LinearLayout>
+
+</LinearLayout>

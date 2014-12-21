@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:textSize="14dip"
+        android:text="填写真实资料，有助于结识优质人脉哦~" />
+
+    <com.baidu.bvideoviewsample1.view.ZmoEditText
+        android:id="@+id/name_edit_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginTop="30dip" />
+
+    <com.baidu.bvideoviewsample1.view.ZmoEditText
+        android:id="@+id/work_edit_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginBottom="40dip"
+        android:layout_marginTop="20dip" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:gravity="center"
+        android:text="确定"
+        android:textSize="14dip" />
+
+</LinearLayout>

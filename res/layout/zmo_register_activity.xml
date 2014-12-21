@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/mobile_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            android:gravity="center"
+            android:text="@string/mobile_tab_lable"
+            android:textColor="@android:color/white" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/email_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="35dip"
+            android:layout_weight="1"
+            android:background="@android:color/background_dark"
+            android:gravity="center"
+            android:text="@string/email_tab_lable"
+            android:textColor="@android:color/white" >
+        </TextView>
+    </LinearLayout>
+
+    <com.zmo.view.ZmoEditText
+        android:id="@+id/login_edit_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginTop="40dip" />
+
+    <com.zmo.view.ZmoEditText
+        android:id="@+id/pwd_edit_id"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginBottom="40dip"
+        android:layout_marginTop="20dip" />
+
+    <LinearLayout
+        android:id="@+id/get_code_linearlayout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <com.zmo.view.ZmoEditText
+            android:id="@+id/code_edit_id"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_weight="1" />
+
+        <com.ad.view.progressbutton.CircularProgressButton
+            android:id="@+id/get_code_btn_id"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:layout_marginLeft="10dip"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="14dip"
+            app:cpb_textComplete="@string/success_str"
+            app:cpb_textError="@string/error_str"
+            app:cpb_textIdle="@string/get_code_lable" />
+    </LinearLayout>
+
+    <com.ad.view.progressbutton.CircularProgressButton
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginTop="40dip"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textSize="14dip"
+        android:id="@+id/register_btn_id"
+        app:cpb_textComplete="@string/register_btn_success_str"
+        app:cpb_textError="@string/register_btn_error_str"
+        app:cpb_textIdle="@string/register_btn_default_str" />
+
+</LinearLayout>
