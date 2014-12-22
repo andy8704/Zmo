@@ -1,13 +1,16 @@
 package com.zmo;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.ad.view.shapeimageview.CircularImageView;
+import com.zmo.data.AccountData;
 import com.zmo.view.ZmoOrderView;
 
 public class ZmoOwnerFragment extends BaseFragment implements OnClickListener {
@@ -63,6 +66,15 @@ public class ZmoOwnerFragment extends BaseFragment implements OnClickListener {
 		ll_SaveBtn.setOnClickListener(this);
 		tv_SetBtn.setOnClickListener(this);
 		tv_AboutBtn.setOnClickListener(this);
+
+		onRegisterAccountChangeListener();
+	}
+
+	@Override
+	public void onDestroyView() {
+		super.onDestroyView();
+
+		unRegisterAccountChangeListener();
 	}
 
 	@Override
@@ -86,6 +98,40 @@ public class ZmoOwnerFragment extends BaseFragment implements OnClickListener {
 			break;
 		}
 
+	}
+
+	private SharedPreferences mAccountSharePreferences = null;
+
+	private void onRegisterAccountChangeListener() {
+
+		mAccountSharePreferences = getActivity().getSharedPreferences(AccountData.KEY_ACCOUNT_SHAPE, 0);
+		mAccountSharePreferences.registerOnSharedPreferenceChangeListener(mShareListener);
+	}
+
+	private OnSharedPreferenceChangeListener mShareListener = new OnSharedPreferenceChangeListener() {
+		@Override
+		public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+			if (!TextUtils.isEmpty(key)) {
+				if (TextUtils.equals(key, AccountData.KEY_NICK_NAME)) {
+					String nickName = sharedPreferences.getString(key, "");
+					tv_UserNameView.setText(nickName);
+				} else if (TextUtils.equals(key, AccountData.KEY_OCCUPATION)) {
+					String occupation = sharedPreferences.getString(key, "");
+					tv_UserOccupationView.setText(occupation);
+				} else if (TextUtils.equals(key, AccountData.KEY_USER_ICON)) {
+					String userIcon = sharedPreferences.getString(key, "");
+					if (!TextUtils.isEmpty(userIcon))
+						ZmoApplication.onGetInstance().onGetFinalBitmap().display(iv_UserImageView, userIcon);
+				}
+
+			}
+		}
+	};
+
+	private void unRegisterAccountChangeListener() {
+
+		if (null != mAccountSharePreferences && null != mShareListener)
+			mAccountSharePreferences.unregisterOnSharedPreferenceChangeListener(mShareListener);
 	}
 
 }

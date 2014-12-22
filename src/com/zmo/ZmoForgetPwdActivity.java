@@ -1,11 +1,6 @@
 package com.zmo;
 
-import com.ad.util.ToastUtil;
-import com.ad.view.progressbutton.CircularProgressButton;
-import com.zmo.utils.NetWorkMonitor;
-import com.zmo.view.ZmoEditText;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -14,6 +9,11 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+
+import com.ad.util.ToastUtil;
+import com.ad.view.progressbutton.CircularProgressButton;
+import com.zmo.utils.NetWorkMonitor;
+import com.zmo.view.ZmoEditText;
 
 public class ZmoForgetPwdActivity extends ZmoBasicActivity implements OnClickListener {
 

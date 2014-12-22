@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 导师简介的区域的布局 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/title_lable_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="活动简介"
+        android:layout_marginTop="10dip"
+        android:textColor="@color/color_font1"
+        android:textSize="14dip" />
+
+    <TextView
+        android:id="@+id/activity_desp_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:layout_marginTop="20dip"
+        android:text="清华，北大总裁班网络营销专家,首批腾讯智慧意向洋酒学院的校长"
+        android:textColor="@color/color_font1"
+        android:textSize="12dip" />
+
+</LinearLayout>

@@ -48,6 +48,12 @@
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
+            android:name=".ZmoForgetPwdActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
             android:name=".ZmoRegisterActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"

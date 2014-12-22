@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- 线上活动详情 -->
+<!-- 线下活动详情 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -31,21 +31,6 @@
                 android:layout_height="1px"
                 android:layout_marginBottom="10dip"
                 android:layout_marginTop="30dip"
-                android:background="@color/color_divider" />
-
-            <!-- 导师简介 -->
-
-            <include
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                layout="@layout/zmo_tutor_show_view" >
-            </include>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1px"
-                android:layout_marginBottom="10dip"
-                android:layout_marginTop="20dip"
                 android:background="@color/color_divider" />
 
             <!-- 活动简介 -->

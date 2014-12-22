@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 课程详情 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_dedede_bg"
+    android:orientation="vertical"
+    android:padding="10dip" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <!-- 课程描述 -->
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/zmo_course_show_view" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="30dip"
+                android:background="@color/color_divider" />
+
+            <!-- 导师简介 -->
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/zmo_tutor_show_view" >
+            </include>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="20dip"
+                android:background="@color/color_divider" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/comment_btn_id"
+                    android:layout_width="80dip"
+                    android:layout_height="30dip"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/color_535353"
+                    android:gravity="center"
+                    android:text="写评论"
+                    android:textColor="@color/color_font1"
+                    android:textSize="14dip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/comment_btn_id"
+                    android:text="学员反馈"
+                    android:textColor="@color/color_font1"
+                    android:textSize="14dip" />
+            </RelativeLayout>
+
+            <com.ad.view.MyFullListView
+                android:id="@+id/listview_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent" >
+            </com.ad.view.MyFullListView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

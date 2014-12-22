@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+        <ImageView
+            android:id="@+id/img_view_id"
+            android:layout_width="match_parent"
+            android:layout_height="200dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/test_pic_subject" />
+
+        <TextView
+            android:id="@+id/img_mark_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dip"
+            android:text="视频课程"
+            android:textColor="@android:color/white"
+            android:textSize="14dip" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/course_tutor_name_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/color_font1"
+        android:textSize="14dip" />
+
+    <TextView
+        android:id="@+id/course_tag_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/color_font1"
+        android:textSize="14dip" />
+
+    <TextView
+        android:id="@+id/course_desp_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="left|center_vertical"
+        android:text="课程简介：\n经过几个月的努力，我们终于上线了一个版本"
+        android:textColor="@color/color_font1"
+        android:textSize="14dip" />
+
+    <TextView
+        android:id="@+id/course_price_view_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/color_font1"
+        android:textSize="14dip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/signup_btn_id"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginRight="15dip"
+            android:layout_weight="1"
+            android:background="@color/color_535353"
+            android:singleLine="true"
+            android:text="报名"
+            android:textColor="@color/color_tool_text"
+            android:textSize="16dip" />
+
+        <Button
+            android:id="@+id/save_btn_id"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="15dip"
+            android:layout_weight="1"
+            android:background="@color/color_535353"
+            android:singleLine="true"
+            android:text="收藏"
+            android:textColor="@color/color_tool_text"
+            android:textSize="16dip" />
+    </LinearLayout>
+
+</LinearLayout>
