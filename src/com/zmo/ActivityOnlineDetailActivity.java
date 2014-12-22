@@ -16,16 +16,16 @@ import com.ad.util.NetWorkMonitor;
 import com.ad.util.ToastUtil;
 import com.ad.view.MyFullListView;
 import com.zmo.adapter.CommentItemAdapter;
+import com.zmo.model.ActivityDetailModel;
 import com.zmo.model.CommentModel;
 import com.zmo.model.CourseDetailModel;
 
-public class CourseDetailActivity extends ZmoBasicActivity implements OnClickListener {
+public class ActivityOnlineDetailActivity extends ZmoBasicActivity implements OnClickListener {
 
-	private ImageView iv_CourseImageView;
-	private TextView tv_CourseTypeView;
-	private TextView tv_TutorView;
-	private TextView tv_TagView;
-	private TextView tv_CourseDespView;
+	private ImageView iv_ActivityImageView;
+	private TextView tv_TitleView;
+	private TextView tv_AddressView;
+	private TextView tv_TimeView;
 	private TextView tv_PriceView;
 	private Button b_SignBtn;
 	private Button b_SaveBtn;
@@ -34,10 +34,8 @@ public class CourseDetailActivity extends ZmoBasicActivity implements OnClickLis
 	private TextView tv_TutorNameView;
 	private TextView tv_TutorOccupationView;
 	private TextView tv_TutorDespView;
-	private TextView tv_CommentBtn;
-	private MyFullListView mListView;
-	private List<CommentModel> mCommentList;
-	private CommentItemAdapter mAdapter = null;
+	
+	private TextView tv_ActivityDespView;
 
 	private Handler mHandler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
@@ -57,20 +55,19 @@ public class CourseDetailActivity extends ZmoBasicActivity implements OnClickLis
 	protected void onCreate(Bundle arg0) {
 		// TODO Auto-generated method stub
 		super.onCreate(arg0);
-		setContentView(R.layout.course_detail_activity);
+		setContentView(R.layout.activity_online_activity);
 
 		initView();
-		onGetCourseDetailInfo();
+		onGetActivityDetailInfo();
 	}
 
 	private void initView() {
 
-		iv_CourseImageView = (ImageView) findViewById(R.id.img_view_id);
-		tv_CourseTypeView = (TextView) findViewById(R.id.img_mark_id);
-		tv_TutorView = (TextView) findViewById(R.id.course_tutor_name_id);
-		tv_TagView = (TextView) findViewById(R.id.course_tag_view_id);
-		tv_CourseDespView = (TextView) findViewById(R.id.course_desp_view_id);
-		tv_PriceView = (TextView) findViewById(R.id.course_price_view_id);
+		iv_ActivityImageView = (ImageView) findViewById(R.id.img_view_id);
+		tv_TitleView = (TextView) findViewById(R.id.subject_view_id);
+		tv_AddressView = (TextView) findViewById(R.id.addr_view_id);
+		tv_TimeView = (TextView) findViewById(R.id.time_view_id);
+		tv_PriceView = (TextView) findViewById(R.id.price_view_id);
 		b_SignBtn = (Button) findViewById(R.id.signup_btn_id);
 		b_SaveBtn = (Button) findViewById(R.id.save_btn_id);
 
@@ -79,15 +76,10 @@ public class CourseDetailActivity extends ZmoBasicActivity implements OnClickLis
 		tv_TutorOccupationView = (TextView) findViewById(R.id.tutor_occupation_id);
 		tv_TutorDespView = (TextView) findViewById(R.id.tutor_desp_id);
 
-		tv_CommentBtn = (TextView) findViewById(R.id.comment_btn_id);
-		mListView = (MyFullListView) findViewById(R.id.listview_id);
-		mCommentList = new ArrayList<CommentModel>(10);
-		mAdapter = new CommentItemAdapter(this, mCommentList);
-		mListView.setAdapter(mAdapter);
+		tv_ActivityDespView = (TextView) findViewById(R.id.activity_desp_id);
 
 		b_SignBtn.setOnClickListener(this);
 		b_SaveBtn.setOnClickListener(this);
-		tv_CommentBtn.setOnClickListener(this);
 	}
 
 	@Override
@@ -104,13 +96,10 @@ public class CourseDetailActivity extends ZmoBasicActivity implements OnClickLis
 		case R.id.save_btn_id:
 			// 收藏
 			break;
-		case R.id.comment_btn_id:
-			// 评论
-			break;
 		}
 	}
 
-	private void onGetCourseDetailInfo() {
+	private void onGetActivityDetailInfo() {
 		if (!NetWorkMonitor.isConnect(this)) {
 			ToastUtil.onShowToast(this, "请链接网络");
 			return;
@@ -118,26 +107,24 @@ public class CourseDetailActivity extends ZmoBasicActivity implements OnClickLis
 
 		new Thread() {
 			public void run() {
-				synchronized (CourseDetailActivity.class) {
+				synchronized (ActivityOnlineDetailActivity.class) {
 
 				}
 			};
 		}.start();
 	}
 
-	private void onSetData(final CourseDetailModel model) {
+	private void onSetData(final ActivityDetailModel model) {
 		if (null == model)
 			return;
 
-		tv_TutorView.setText(String.format(getString(R.string.tutor_lable_format_str), model.tutorName));
-		tv_TagView.setText(String.format(getString(R.string.course_lable_format_str), model.lable));
-		tv_CourseDespView.setText(String.format(getString(R.string.course_desp_format_str), model.desp));
+		tv_TitleView.setText(String.format(getString(R.string.activity_theme_format_str), model.title));
+		tv_AddressView.setText(String.format(getString(R.string.activity_address_format_str), model.address));
+		tv_TimeView.setText(String.format(getString(R.string.activity_time_format_str), model.activityTime));
 		tv_PriceView.setText(String.format(getString(R.string.course_price_format_str), model.price));
 
-		tv_CourseTypeView.setText(model.courseType);
-		
 		if (!TextUtils.isEmpty(model.picUrl))
-			ZmoApplication.onGetInstance().onGetFinalBitmap().display(iv_CourseImageView, model.picUrl);
+			ZmoApplication.onGetInstance().onGetFinalBitmap().display(iv_ActivityImageView, model.picUrl);
 
 		if (!TextUtils.isEmpty(model.tutorIconUrl))
 			ZmoApplication.onGetInstance().onGetFinalBitmap().display(iv_TutorImageView, model.tutorIconUrl);
@@ -145,5 +132,7 @@ public class CourseDetailActivity extends ZmoBasicActivity implements OnClickLis
 		tv_TutorNameView.setText(model.tutorName);
 		tv_TutorOccupationView.setText(model.tutorOccupation);
 		tv_TutorDespView.setText(model.tutorDesp);
+		
+		tv_ActivityDespView.setText(model.desp);
 	}
 }

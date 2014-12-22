@@ -25,9 +25,13 @@
     <string name="tourte_title_str">导师</string>
     <!-- <string name="tourte_fans_format_str">%1$s&#160;&#160;</string> -->
     <string name="tourte_fans_format_str">%1$d粉丝</string>
+    <string name="tutor_lable_format_str">导师：%1$s</string>
     <string name="course_lable_format_str">标签：%1$s</string>
     <string name="course_desp_format_str">课程简介：%1$s</string>
     <string name="activity_theme_format_str">主题：%1$s</string>
+    <string name="activity_address_format_str">地点：%1$s</string>
+    <string name="course_price_format_str">价格：%1$d元</string>
+    <string name="activity_time_format_str">时间：%1$s</string>
     <string name="video_time_format_str">时长：%1$s</string>
     <string name="login_btn_default_str">登录</string>
     <string name="login_btn_success_str">登录成功</string>

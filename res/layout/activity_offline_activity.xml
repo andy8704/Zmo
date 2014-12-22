@@ -40,6 +40,32 @@
                 android:layout_height="wrap_content"
                 layout="@layout/zmo_activity_desp_show_view" >
             </include>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="30dip"
+                android:background="@color/color_divider" />
+
+            <TextView
+                android:id="@+id/title_lable_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="嘉宾简介"
+                android:textColor="@color/color_font1"
+                android:textSize="14dip" />
+
+            <com.ad.view.MyFullGridView
+                android:id="@+id/listview_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:horizontalSpacing="5dip"
+                android:numColumns="2"
+                android:verticalSpacing="5dip" >
+            </com.ad.view.MyFullGridView>
         </LinearLayout>
     </ScrollView>
 
