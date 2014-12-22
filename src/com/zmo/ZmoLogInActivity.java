@@ -28,7 +28,7 @@ public class ZmoLogInActivity extends ZmoBasicActivity implements OnClickListene
 	private TextView mWeiBoBtn;
 	private TextView mQQBtn;
 	private TextView mWeiXinBtn;
-	
+
 	private Handler mHandler = new Handler() {
 		public void handleMessage(android.os.Message msg) {
 			switch (msg.what) {
@@ -44,7 +44,6 @@ public class ZmoLogInActivity extends ZmoBasicActivity implements OnClickListene
 			}
 		};
 	};
-
 
 	@Override
 	protected void onCreate(Bundle arg0) {
@@ -73,7 +72,7 @@ public class ZmoLogInActivity extends ZmoBasicActivity implements OnClickListene
 		mWeiBoBtn = (TextView) findViewById(R.id.weibo_login_btn_id);
 		mQQBtn = (TextView) findViewById(R.id.qq_login_btn_id);
 		mWeiXinBtn = (TextView) findViewById(R.id.weixin_login_btn_id);
-		
+
 		onSetState(false);
 	}
 
@@ -98,12 +97,16 @@ public class ZmoLogInActivity extends ZmoBasicActivity implements OnClickListene
 	public void onClick(View view) {
 		switch (view.getId()) {
 		case R.id.login_btn_id:
+			onLogIn();
 			break;
 		case R.id.email_tab_id:
 			onSetState(true);
 			break;
 		case R.id.mobile_tab_id:
 			onSetState(false);
+			break;
+		case R.id.forget_view_id:
+			startActivity(new Intent(ZmoLogInActivity.this, ZmoForgetPwdActivity.class));
 			break;
 		case R.id.weibo_login_btn_id:
 			break;
@@ -116,29 +119,29 @@ public class ZmoLogInActivity extends ZmoBasicActivity implements OnClickListene
 			break;
 		}
 	}
-	
-	private void onSetState(boolean bEmailFlag){
-		if(bEmailFlag){
+
+	private void onSetState(boolean bEmailFlag) {
+		if (bEmailFlag) {
 			// email模式登录
 			mNameEditView.onSetTextType(InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS);
-			
+
 			mEmailTabBtn.setBackgroundColor(getResources().getColor(R.color.color_535353));
 			mEmailTabBtn.setTextColor(Color.WHITE);
 			mMobileTabBtn.setBackgroundColor(Color.WHITE);
 			mMobileTabBtn.setTextColor(Color.BLACK);
-		}else{
+		} else {
 			// mobile模式登录
 			mNameEditView.onSetTextType(InputType.TYPE_CLASS_NUMBER);
-			
+
 			mMobileTabBtn.setBackgroundColor(getResources().getColor(R.color.color_535353));
 			mMobileTabBtn.setTextColor(Color.WHITE);
 			mEmailTabBtn.setBackgroundColor(Color.WHITE);
 			mEmailTabBtn.setTextColor(Color.BLACK);
 		}
 	}
-	
-	private void onLogIn(){
-		
+
+	private void onLogIn() {
+
 		String mobileString = mNameEditView.onGetEditText();
 		String pwdString = mPwdEditView.onGetEditText();
 

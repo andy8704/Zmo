@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_dedede_bg"
     android:orientation="vertical"
     android:paddingLeft="15dip"
-    android:background="@color/color_tool_bg"
-    android:paddingRight="15dip" >
+    android:paddingRight="15dip"
+    android:paddingTop="20dip" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,9 +19,9 @@
             android:layout_width="match_parent"
             android:layout_height="35dip"
             android:layout_weight="1"
-            android:background="@android:color/background_dark"
+            android:background="@color/color_535353"
             android:gravity="center"
-            android:text="手机"
+            android:text="手机找回"
             android:textColor="@android:color/white" >
         </TextView>
 
@@ -28,18 +30,19 @@
             android:layout_width="match_parent"
             android:layout_height="35dip"
             android:layout_weight="1"
-            android:background="@android:color/background_dark"
+            android:background="@color/color_535353"
             android:gravity="center"
-            android:text="邮箱"
+            android:text="邮箱找回"
             android:textColor="@android:color/white" >
         </TextView>
     </LinearLayout>
 
     <com.zmo.view.ZmoEditText
-        android:id="@+id/login_edit_id"
+        android:id="@+id/account_edit_id"
         android:layout_width="match_parent"
         android:layout_height="45dip"
-        android:layout_marginTop="40dip" />
+        android:layout_marginTop="40dip"
+        android:background="@drawable/post_bg" />
 
     <LinearLayout
         android:id="@+id/get_code_linearlayout_id"
@@ -53,23 +56,37 @@
             android:id="@+id/code_edit_id"
             android:layout_width="match_parent"
             android:layout_height="45dip"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="@drawable/post_bg" />
 
-        <Button
+        <com.ad.view.progressbutton.CircularProgressButton
             android:id="@+id/get_code_btn_id"
             android:layout_width="wrap_content"
             android:layout_height="45dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
             android:layout_marginLeft="10dip"
             android:gravity="center"
-            android:text="获取验证码" />
+            android:textColor="@android:color/white"
+            android:textSize="14dip"
+            android:background="@color/color_dedede_bg"
+            app:cpb_textComplete="@string/success_str"
+            app:cpb_textError="@string/error_str"
+            app:cpb_textIdle="@string/get_code_lable" />
     </LinearLayout>
 
-    <Button
+    
+     <com.ad.view.progressbutton.CircularProgressButton
+        android:id="@+id/ok_btn_id"
         android:layout_width="match_parent"
         android:layout_height="45dip"
-        android:layout_marginTop="40dip"
         android:gravity="center"
-        android:text="下一步"
-        android:textSize="14dip" />
+          android:layout_marginTop="40dip"
+        android:background="@color/color_535353"
+        android:textColor="@android:color/white"
+        android:textSize="14dip"
+        app:cpb_textComplete="@string/success_str"
+        app:cpb_textError="@string/error_str"
+        app:cpb_textIdle="@string/ok_str" />
 
 </LinearLayout>
