@@ -15,4 +15,9 @@ public class ActivityModel extends BaseModel {
 
 	/** 课程描述 **/
 	public String desp;
+
+	/** 价格 **/
+	public long price;
+	/** 名额 **/
+	public long placesCount;
 }

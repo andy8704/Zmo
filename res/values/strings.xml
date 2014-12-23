@@ -66,5 +66,10 @@
     <string name="save_course_lable">课程</string>
     <string name="save_activity_lable">活动</string>
     <string name="save_tutor_lable">导师</string>
+    <string name="activity_online_str">线上</string>
+    <string name="activity_offline_str">线下</string>
+    <string name="activity_price_format_str">价格：%1$s</string>
+    <string name="activity_count_format_str">名额：%1$s</string>
+    <string name="hot_lable">热门</string>
 
 </resources>

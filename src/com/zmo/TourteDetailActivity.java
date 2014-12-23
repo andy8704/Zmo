@@ -7,6 +7,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * 
+ * 
+ * @类名称: TourteDetailActivity
+ * @描述: 导师详情
+ * @时间: 2014-12-23 下午12:03:32
+ * 
+ */
 public class TourteDetailActivity extends ZmoBasicActivity implements OnClickListener {
 
 	private ImageView iv_UserImgView;
@@ -50,17 +58,17 @@ public class TourteDetailActivity extends ZmoBasicActivity implements OnClickLis
 			break;
 		}
 	}
-	
-	private void onSaveTourte(){
-		
+
+	private void onSaveTourte() {
+
 	}
-	
-	private void onSetTabState(final int viewId){
-		
-		if(R.id.course_tab_id == viewId){
+
+	private void onSetTabState(final int viewId) {
+
+		if (R.id.course_tab_id == viewId) {
 			tv_courseBtn.setTextColor(getResources().getColor(R.color.color_tool_text_select));
 			tv_RelatedBtn.setTextColor(getResources().getColor(R.color.color_tool_text));
-		}else if(R.id.related_tab_id == viewId){
+		} else if (R.id.related_tab_id == viewId) {
 			tv_courseBtn.setTextColor(getResources().getColor(R.color.color_tool_text));
 			tv_RelatedBtn.setTextColor(getResources().getColor(R.color.color_tool_text_select));
 		}
@@ -69,7 +77,7 @@ public class TourteDetailActivity extends ZmoBasicActivity implements OnClickLis
 	@Override
 	public void onRightClick() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }

@@ -55,7 +55,7 @@
         <Button
             android:id="@+id/signup_btn_id"
             android:layout_width="100dip"
-            android:layout_height="35dip"
+            android:layout_height="30dip"
             android:layout_marginTop="8dip"
             android:singleLine="true"
             android:text="报名"

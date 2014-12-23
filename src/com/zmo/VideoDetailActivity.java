@@ -19,6 +19,14 @@ import com.zmo.utils.NetWorkMonitor;
 import com.zmo.view.MediaPlayerView;
 import com.zmo.view.MyListView;
 
+/**
+ * 
+ * 
+ * @类名称: VideoDetailActivity
+ * @描述: 视频详情
+ * @时间: 2014-12-23 下午12:04:32
+ * 
+ */
 public class VideoDetailActivity extends ZmoBasicActivity {
 
 	private MediaPlayerView mMediaView;
@@ -71,7 +79,14 @@ public class VideoDetailActivity extends ZmoBasicActivity {
 		mMoreBtnView.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View arg0) {
-				onGetNextPage();				
+				onGetNextPage();
+			}
+		});
+
+		b_commentBtn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				// 写评论
 			}
 		});
 	}
@@ -113,6 +128,6 @@ public class VideoDetailActivity extends ZmoBasicActivity {
 	@Override
 	public void onRightClick() {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

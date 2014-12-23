@@ -19,6 +19,14 @@ import com.zmo.model.TutorModel;
 import com.zmo.utils.CommonDefine;
 import com.zmo.utils.NetWorkMonitor;
 
+/**
+ * 
+ * 
+ * @类名称: TourteActivity
+ * @描述: 导师列表展示
+ * @时间: 2014-12-23 下午12:02:46
+ * 
+ */
 public class TourteActivity extends ZmoBasicActivity implements IXListViewListener, OnItemClickListener {
 
 	private PullListView mPullListView;
@@ -145,6 +153,6 @@ public class TourteActivity extends ZmoBasicActivity implements IXListViewListen
 	@Override
 	public void onRightClick() {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

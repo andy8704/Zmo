@@ -19,6 +19,14 @@ import com.zmo.model.VideoModel;
 import com.zmo.utils.CommonDefine;
 import com.zmo.utils.NetWorkMonitor;
 
+/**
+ * 
+ * 
+ * @类名称: VideoActivity
+ * @描述: 视频列表
+ * @时间: 2014-12-23 下午12:04:22
+ *
+ */
 public class VideoActivity extends ZmoBasicActivity implements IXListViewListener, OnItemClickListener {
 
 	private PullListView mPullListView = null;

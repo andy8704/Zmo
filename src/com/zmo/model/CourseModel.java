@@ -12,4 +12,5 @@ public class CourseModel extends BaseModel{
 	public String title;
 	public String lable;
 	public String desp;
+	public long price;
 }

@@ -42,7 +42,7 @@
             android:gravity="left|center_vertical"
             android:singleLine="true"
             android:text="3个IT男创业，100天卖出20万个肉夹馍"
-            android:textColor="@android:color/black"
+            android:textColor="@color/color_font1"
             android:textSize="16dip" />
 
         <TextView
