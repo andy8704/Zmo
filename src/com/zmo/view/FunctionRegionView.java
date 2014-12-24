@@ -15,6 +15,8 @@ public class FunctionRegionView extends LinearLayout {
 	private TextView mCountView;
 	private LinearLayout mGroupViewLayout;
 	private Context mContext;
+	private View.OnClickListener mListener;
+	private LinearLayout mFunctionMoreBtn;
 
 	public FunctionRegionView(Context context) {
 		super(context);
@@ -36,9 +38,19 @@ public class FunctionRegionView extends LinearLayout {
 	private void initUI(final Context context) {
 		mContext = context;
 		inflate(context, R.layout.function_region_view, this);
+
+		mFunctionMoreBtn = (LinearLayout) findViewById(R.id.function_btn_id);
 		mFuncTextView = (TextView) findViewById(R.id.function_lable_id);
 		mCountView = (TextView) findViewById(R.id.count_view_id);
 		mGroupViewLayout = (LinearLayout) findViewById(R.id.groupview_id);
+
+		mFunctionMoreBtn.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View arg0) {
+				if (null != mListener)
+					mListener.onClick(arg0);
+			}
+		});
 	}
 
 	public void onSetBasicInfo(final String labStr, final int nCount) {
@@ -53,4 +65,7 @@ public class FunctionRegionView extends LinearLayout {
 		mGroupViewLayout.addView(view);
 	}
 
+	public void addDetailClick(final View.OnClickListener listener) {
+		mListener = listener;
+	}
 }

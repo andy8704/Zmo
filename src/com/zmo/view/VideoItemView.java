@@ -11,6 +11,7 @@ import android.widget.TextView;
 import com.zmo.R;
 import com.zmo.ZmoApplication;
 import com.zmo.model.CourseModel;
+import com.zmo.model.VideoModel;
 
 public class VideoItemView extends LinearLayout{
 
@@ -45,14 +46,14 @@ public class VideoItemView extends LinearLayout{
 		mDespView = (TextView) findViewById(R.id.desp_view_id);
 	}
 
-	public void onSetData(final CourseModel data) {
+	public void onSetData(final VideoModel data) {
 		if (null == data)
 			return;
 
-		if (!TextUtils.isEmpty(data.picUrl))
-			ZmoApplication.onGetInstance().onGetFinalBitmap().display(mImageView, data.picUrl);
+		if (!TextUtils.isEmpty(data.videoPicUrl))
+			ZmoApplication.onGetInstance().onGetFinalBitmap().display(mImageView, data.videoPicUrl);
 
 		mTitleView.setText(data.title);
-		mDespView.setText(String.format(mContext.getString(R.string.video_time_format_str), data.desp));
+		mDespView.setText(String.format(mContext.getString(R.string.video_time_format_str), data.playTime));
 	}
 }

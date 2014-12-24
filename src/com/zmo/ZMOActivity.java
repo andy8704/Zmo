@@ -24,8 +24,9 @@ public class ZMOActivity extends FragmentActivity implements OnClickListener {
 		initUI();
 		addListener();
 		
-		onSetState(R.id.my_btn_id);
-		onShowOwner();
+		onSetState(R.id.find_btn_id);
+		onShowFind();
+//		onShowOwner();
 	}
 
 	private void initUI() {

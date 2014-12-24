@@ -44,12 +44,16 @@ public class ActivityActivity extends ZmoBasicActivity implements OnClickListene
 		setTitle(R.string.save_activity_lable);
 		
 		initView();
+		onSetState(R.id.online_tab_id);
 	}
 	
 	private void initView(){
 		mOnlineTabBtn = (TextView) findViewById(R.id.online_tab_id);
 		mOfflineTabBtn = (TextView) findViewById(R.id.offline_tab_id);
 		mViewPager = (ViewPager) findViewById(R.id.viewpager_id);
+		
+		mOnlineTabBtn.setOnClickListener(this);
+		mOfflineTabBtn.setOnClickListener(this);
 		
 		List<Fragment> viewList = new ArrayList<Fragment>(2);
 		viewList.add(new OnlineActivityFragment());

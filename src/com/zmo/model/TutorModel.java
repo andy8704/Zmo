@@ -9,7 +9,7 @@ public class TutorModel extends BaseModel{
 
 	public String userIconUrl;
 	public String userName;
-	public String despStr;
+	public String desp;
 	public String picUrl;
 	public String title;
 	public int fansCount;

@@ -38,10 +38,11 @@ public class CourseActivity extends ZmoBasicActivity implements OnClickListener 
 		// TODO Auto-generated method stub
 		super.onCreate(arg0);
 
-		setContentView(R.layout.activity_activity);
-		setTitle(R.string.save_activity_lable);
+		setContentView(R.layout.course_activity);
+		setTitle(R.string.save_course_lable);
 
 		initView();
+		onSetState(R.id.hot_tab_id);
 	}
 
 	private void initView() {
@@ -49,9 +50,14 @@ public class CourseActivity extends ZmoBasicActivity implements OnClickListener 
 		mVideoTabBtn = (TextView) findViewById(R.id.video_tab_id);
 		mOfflineTabBtn = (TextView) findViewById(R.id.offline_tab_id);
 		mViewPager = (ViewPager) findViewById(R.id.viewpager_id);
+		
+		mHotTabBtn.setOnClickListener(this);
+		mVideoTabBtn.setOnClickListener(this);
+		mOfflineTabBtn.setOnClickListener(this);
 
 		List<Fragment> viewList = new ArrayList<Fragment>(3);
 		viewList.add(new CourseHotFragment());
+		viewList.add(new CourseOfflineFragment());
 		viewList.add(new CourseOfflineFragment());
 		mPagerAdapter = new ZmoFragmentAdaper(getSupportFragmentManager(), viewList);
 		mViewPager.setAdapter(mPagerAdapter);
@@ -64,7 +70,7 @@ public class CourseActivity extends ZmoBasicActivity implements OnClickListener 
 					onSetState(R.id.hot_tab_id);
 				} else if (1 == position) {
 					onSetState(R.id.video_tab_id);
-				} else if (1 == position) {
+				} else if (2 == position) {
 					onSetState(R.id.offline_tab_id);
 				}
 			}

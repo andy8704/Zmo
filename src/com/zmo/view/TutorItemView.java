@@ -54,6 +54,6 @@ public class TutorItemView extends LinearLayout {
 			ZmoApplication.onGetInstance().onGetFinalBitmap().display(mImageView, data.picUrl);
 
 		mTitleView.setText(data.title);
-		mDespView.setText(data.despStr);
+		mDespView.setText(data.desp);
 	}
 }

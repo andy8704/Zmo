@@ -56,7 +56,7 @@ public class TutorGridViewAdapter extends BaseAdapter{
 		TutorModel model = mDataList.get(arg0);
 		if (null != model) {
 			holder.tv_NameView.setText(model.userName);
-			holder.tv_OccupationView.setText(model.despStr);
+			holder.tv_OccupationView.setText(model.desp);
 			if (!TextUtils.isEmpty(model.userIconUrl))
 				ZmoApplication.onGetInstance().onGetFinalBitmap().display(holder.iv_imgView, model.userIconUrl);
 			else {

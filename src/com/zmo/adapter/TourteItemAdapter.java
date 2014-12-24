@@ -56,7 +56,7 @@ public class TourteItemAdapter extends BaseAdapter {
 		TutorModel model = mDataList.get(arg0);
 		if (null != model) {
 			holder.tv_NameView.setText(model.userName);
-			holder.tv_DespView.setText(model.despStr);
+			holder.tv_DespView.setText(model.desp);
 			holder.tv_FansView.setText(String.format(mContext.getString(R.string.tourte_fans_format_str), model.fansCount));
 			if (!TextUtils.isEmpty(model.userIconUrl))
 				ZmoApplication.onGetInstance().onGetFinalBitmap().display(holder.iv_imgView, model.userIconUrl);
